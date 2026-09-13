@@ -40,8 +40,8 @@
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3"
   },
-  "packageManager": "yarn@4.9.1",
+    "packageManager": "yarn@4.9.1",
   "engines": {
-    "node": "20.x"
+    "node": "22.x"
   }
 }
