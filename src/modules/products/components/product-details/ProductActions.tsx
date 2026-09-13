@@ -96,6 +96,7 @@ export const ProductActions = ({
   };
 
   const handleAddToCart = async () => {
+    console.log("CLICK ADD TO CART", { selectedVariant, isAdding });    
     if (!selectedVariant || isAdding) return;
 
     setIsAdding(true);
@@ -157,3 +158,6 @@ export const ProductActions = ({
     </div>
   );
 };
+
+
+
