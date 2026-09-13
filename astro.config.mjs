@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
 import { loadEnv } from "vite";
 
-import cloudflare from "@astrojs/cloudflare";
+import node from "@astrojs/node";
 import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
 
@@ -17,8 +17,9 @@ const medusaBackendDomain = PUBLIC_MEDUSA_BACKEND_URL
 
 // https://astro.build/config
 export default defineConfig({
-  adapter: cloudflare({
-    imageService: "compile",
+  output: "server",
+  adapter: node({
+    mode: "standalone",
   }),
   integrations: [react()],
   server: {
