@@ -17,6 +17,15 @@ const medusaBackendDomain = PUBLIC_MEDUSA_BACKEND_URL
 
 // https://astro.build/config
 export default defineConfig({
+    security: {
+  checkOrigin: false,
+  allowedDomains: [
+    {
+      hostname: "astro-medusa-starter-production.up.railway.app",
+      protocol: "https",
+    },
+  ],
+},
   output: "server",
   adapter: node({
     mode: "standalone",
